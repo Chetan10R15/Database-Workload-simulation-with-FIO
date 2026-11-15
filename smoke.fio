@@ -1,0 +1,15 @@
+[global]
+ioengine=libaio
+direct=1
+size=1g
+runtime=10
+time_based=1
+filename=${HOME}/fio-lab/db-test.bin
+percentile_list=50:95:99
+group_reporting=1
+
+[smoke]
+rw=randread
+bs=4k
+iodepth=8
+numjobs=1
